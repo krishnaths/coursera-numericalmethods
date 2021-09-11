@@ -18,6 +18,7 @@ for idx = 1:length(mu)
     x = x_0;    
     for idy = 1:n_trans
         x = mu(idx)*x*(1-x);
+        x_0 =  x;
     end
 
     for idz = 1:n_data
@@ -40,8 +41,3 @@ end
 % xlabel('$\mu$','Interpreter','latex','FontSize',14);
 % ylabel('$x\;\;$','Interpreter','latex','FontSize',14);
 % title('Logistic Map Bifurcation Diagram','Interpreter','latex','FontSize',16)
-
-
-
-
-
